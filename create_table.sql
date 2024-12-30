@@ -30,7 +30,7 @@ CREATE TABLE Modulos (
 CREATE TABLE Tipo_empresa (
     id_tipo_empresa INT PRIMARY KEY,
     Nombre VARCHAR(255),
-    Descripcion VARCHAR(255)
+    Descripcion TEXT
 );
 
 CREATE TABLE Empresas (
@@ -230,3 +230,6 @@ CREATE TABLE Factura (
     FOREIGN KEY (id_viaje) REFERENCES Viajes(id_viaje),
     FOREIGN KEY (id_metodo_pago) REFERENCES Metodo_pago(id_metodo_pago)
 );
+
+
+
