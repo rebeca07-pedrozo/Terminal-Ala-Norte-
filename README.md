@@ -1,4 +1,3 @@
-# Terminal-Ala-Norte-
+# terminal-ala-norte-
 A database developed in college with the aim of imitating how Terminal Ala Norte in Bogotá D.C. works.
-- :file_folder: **Description**:
-  - [Description project](Parcial II corte Bases de datos.pdf)
+- [Description](http://https://github.com/rebeca07-pedrozo/Terminal-Ala-Norte-/blob/main/Parcial%20II%20corte%20Bases%20de%20datos.pdf "Description")
