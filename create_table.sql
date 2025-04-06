@@ -231,5 +231,24 @@ CREATE TABLE Factura (
     FOREIGN KEY (id_metodo_pago) REFERENCES Metodo_pago(id_metodo_pago)
 );
 
+CREATE TABLE Tipo_mercancia (
+    id_tipo_mercancia INT PRIMARY KEY,
+    Nombre VARCHAR(100),
+    Descripcion TEXT
+);
+CREATE TABLE Mercancia (
+    id_mercancia INT PRIMARY KEY,
+    descripcion VARCHAR(255),
+    peso DECIMAL(10,2),
+    valor_estimado DECIMAL(10,2),
+    id_tipo_mercancia INT,
+    id_cliente INT,
+    id_viaje INT,
+    id_boleto INT,
+    FOREIGN KEY (id_tipo_mercancia) REFERENCES Tipo_mercancia(id_tipo_mercancia),
+    FOREIGN KEY (id_cliente) REFERENCES Cliente(id_cliente),
+    FOREIGN KEY (id_viaje) REFERENCES Viajes(id_viaje),
+    FOREIGN KEY (id_boleto) REFERENCES Boletos(id_boleto)
+);
 
 
