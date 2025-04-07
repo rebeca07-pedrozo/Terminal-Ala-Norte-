@@ -172,11 +172,131 @@ INSERT INTO Modulos (id_modulo,Nombre,id_sede) VALUES
 (0029,'Transportes Amerlujo',029),
 (0030,'Expreso Santander',030);
 
-INSERT INTO Tipo_empleado (id_tipo_empleado, Nombre, Descripcion) VALUES
-(001, 'Conductor', 'Responsable de la conducción de los buses');
+INSERT INTO Tipo_empleado (id_tipo_empleado, Nombre, Descripcion)  
 
-INSERT INTO empleados (cedula_empleado, Nombres, Apellidos, Telefono, correo, id_ciudad_origen, id_ciudad_residencia, id_tipo_empleado, id_Sede) VALUES
-(100001, 'Juan', 'Perez', '3001234567', 'juan.perez@empresa.com', 001, 0030, 001, 001);
+VALUES  
+
+(001, 'Conductor', 'Responsable de la conducción de los buses'), 
+
+(002, 'Supervisor', 'Encargado de supervisar operaciones'), 
+
+(003, 'Ayudante', 'Asiste al conductor y ayuda con la carga y descarga'), 
+
+(004, 'Mecánico', 'Encargado del mantenimiento y reparación de los vehículos'), 
+
+(005, 'Administrativo', 'Gestión de documentación y atención al cliente'), 
+
+(006, 'Vigilante', 'Seguridad y protección de las instalaciones'), 
+
+(007, 'Despachador', 'Coordina la salida de los buses y la atención a los pasajeros'), 
+
+(008, 'Gestor de Flota', 'Supervisa y gestiona el uso de los vehículos'), 
+
+(009, 'Coordinador de Rutas', 'Planifica y coordina las rutas de los buses'), 
+
+(010, 'Contador', 'Encargado de las finanzas y contabilidad de la empresa'), 
+
+(011, 'Asistente de Recursos Humanos', 'Apoya en la gestión del personal'), 
+
+(012, 'Técnico en Seguridad', 'Asegura el cumplimiento de las normas de seguridad'), 
+
+(013, 'Operador de Sistemas', 'Gestiona el software y la tecnología utilizada en la empresa'), 
+
+(014, 'Encargado de Marketing', 'Desarrolla estrategias de marketing y comunicación'), 
+
+(015, 'Analista de Datos', 'Analiza datos para mejorar la eficiencia de la empresa'), 
+
+(016, 'Jefe de Ventas', 'Lidera el equipo de ventas y estrategias comerciales'), 
+
+(017, 'Planificador de Transporte', 'Organiza y optimiza rutas de transporte'), 
+
+(018, 'Asistente Administrativo', 'Apoya en tareas administrativas y de oficina'), 
+
+(019, 'Especialista en Logística', 'Optimiza la cadena de suministro y distribución'), 
+
+(020, 'Auxiliar Contable', 'Asiste en la contabilidad y registro de operaciones'), 
+
+(021, 'Técnico en Mantenimiento', 'Realiza mantenimiento preventivo y correctivo'), 
+
+(022, 'Investigador de Mercado', 'Estudia el mercado y la competencia'), 
+
+(023, 'Diseñador Gráfico', 'Crea contenido visual y gráfico para la empresa'), 
+
+(024, 'Analista de Recursos Humanos', 'Analiza y gestiona el talento humano'), 
+
+(025, 'Director de Operaciones', 'Supervisa las operaciones diarias de la empresa'), 
+
+(026, 'Entrenador de Personal', 'Capacita y entrena al personal en sus funciones'), 
+
+(027, 'Asesor Legal', 'Brinda asesoría legal a la empresa'), 
+
+(028, 'Coordinador de Seguridad', 'Asegura el cumplimiento de normas de seguridad'), 
+
+(029, 'Consultor de Proyectos', 'Asesora en la planificación y ejecución de proyectos'), 
+
+(030, 'Promotor de Ventas', 'Promociona los servicios de la empresa ante los clientes'); 
+
+INSERT INTO empleados (cedula_empleado, Nombres, Apellidos, Telefono, correo, id_ciudad_origen, id_ciudad_residencia, id_tipo_empleado, id_Sede) VALUES 
+
+(100001, 'Juan', 'Perez', '3001234567', 'juan.perez@empresa.com', 001, 0030, 001, 001),  
+
+(100002, 'Maria', 'Gomez', '3002345678', 'maria.gomez@empresa.com', 002, 0029, 002, 002),  
+
+(100003, 'Carlos', 'Lopez', '3003456789', 'carlos.lopez@empresa.com',003, 0028, 003, 003),   
+
+(100004, 'Ana', 'Martinez', '3004567890', 'ana.martinez@empresa.com',004, 0027, 004, 004),  
+
+(100005, 'Luis', 'Garcia', '3005678901', 'luis.garcia@empresa.com', 005, 0026, 005, 005),   
+
+(100006, 'Laura', 'Rodriguez', '3006789012', 'laura.rodriguez@empresa.com', 006, 0025, 006, 006),  
+
+(100007, 'Pedro', 'Hernandez', '3007890123', 'pedro.hernandez@empresa.com', 007, 0024, 007, 007),  
+
+(100008, 'Sofia', 'Fernandez', '3008901234', 'sofia.fernandez@empresa.com',008, 0023, 008, 008),   
+
+(100009, 'Jose', 'Ramirez', '3009012345', 'jose.ramirez@empresa.com', 009, 0022, 009, 009),  
+
+(100010, 'Elena', 'Torres', '3000123456', 'elena.torres@empresa.com', 0010, 0021, 0010, 0010),   
+
+(100011, 'Miguel', 'Vargas', '3011234567', 'miguel.vargas@empresa.com', 0011, 0020, 0011, 0011),  
+
+(100012, 'Diana', 'Castro', '3012345678', 'diana.castro@empresa.com', 0012, 0019, 0012, 0012),   
+
+(100013, 'Andres', 'Morales', '3013456789', 'andres.morales@empresa.com', 0013, 0018, 0013, 0013),   
+
+(100014, 'Monica', 'Sanchez', '3014567890', 'monica.sanchez@empresa.com', 0014, 0017, 0014, 0014),  
+
+(100015, 'Ricardo', 'Ortega', '3015678901', 'ricardo.ortega@empresa.com', 0015, 0016, 0015, 0015),   
+
+(100016, 'Paula', 'Rubio', '3016789012', 'paula.rubio@empresa.com', 0016, 0015, 0016, 0016),   
+
+(100017, 'Fernando', 'Guzman', '3017890123', 'fernando.guzman@empresa.com', 0017, 0014, 0017, 0017),   
+
+(100018, 'Adriana', 'Mendoza', '3018901234', 'adriana.mendoza@empresa.com', 0018, 0013, 0018, 0018),   
+
+(100019, 'Jorge', 'Silva', '3019012345', 'jorge.silva@empresa.com', 0019, 0012, 0019, 0019),   
+
+(100020, 'Gabriela', 'Rios', '3010123456', 'gabriela.rios@empresa.com', 0020, 0011, 0020, 0020),   
+
+(100021, 'Victor', 'Diaz', '3021234567', 'victor.diaz@empresa.com', 0021, 0010, 0021, 0021),   
+
+(100022, 'Sara', 'Cortes', '3022345678', 'sara.cortes@empresa.com',0022, 009, 0022, 0022),   
+
+(100023, 'Raul', 'Acosta', '3023456789', 'raul.acosta@empresa.com', 0023, 008, 0023, 0023),   
+
+(100024, 'Isabel', 'Nunez', '3024567890', 'isabel.nunez@empresa.com', 0024, 007, 0024, 0024),   
+
+(100025, 'Oscar', 'Molina', '3025678901', 'oscar.molina@empresa.com', 0025, 006, 0025, 0025),   
+
+(100026, 'Claudia', 'Vega', '3026789012', 'claudia.vega@empresa.com', 0026, 005, 0026, 0026),   
+
+(100027, 'Alberto', 'Salazar', '3027890123', 'alberto.salazar@empresa.com', 0027, 004, 0027, 0027),   
+
+(100028, 'Julia', 'Flores', '3028901234', 'julia.flores@empresa.com', 0028, 003, 0028, 0028),   
+
+(100029, 'Emilio', 'Ibanez', '3029012345', 'emilio.ibanez@empresa.com', 0029, 002, 0029, 0029),   
+
+(100030, 'Carmen', 'Suarez', '3020123456', 'carmen.suarez@empresa.com', 0030, 001, 0030, 0030); 
 
 INSERT INTO Tipo_bus (id_tipo_bus, Nombre) VALUES
 (001, 'Bus de larga distancia'),
