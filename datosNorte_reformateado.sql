@@ -298,6 +298,8 @@ INSERT INTO empleados (cedula_empleado, Nombres, Apellidos, Telefono, correo, id
 
 (100030, 'Carmen', 'Suarez', '3020123456', 'carmen.suarez@empresa.com', 0030, 001, 0030, 0030); 
 
+
+
 INSERT INTO Tipo_bus (id_tipo_bus, Nombre) VALUES
 (001, 'Bus de larga distancia'),
 (002, 'Bus intermunicipal'),
@@ -459,40 +461,752 @@ INSERT INTO Seguro (id_seguro, Nombre, Descripcion, id_empresa) VALUES
 (0028, 'Seguro de Dirección', 'Cobertura para problemas en el sistema de dirección', 0028),
 (0029, 'Seguro de Daños a Carga', 'Cobertura para la mercancía transportada', 0029),
 (0030, 'Seguro de Viajeros', 'Cobertura para los pasajeros en caso de accidentes', 0030);
+INSERT INTO Destinos (id_destino, Nombre, id_modulo, id_ciudad_origen, id_ciudad_destino) VALUES  
 
-INSERT INTO Destinos (id_destino, Nombre, id_modulo, id_ciudad_origen, id_ciudad_destino) VALUES
-(001, 'Cartagena', 002, 002, 001);
+(001, 'Cartagena', 002, 002, 001),  
 
-INSERT INTO Rutas (id_ruta, Nombre, id_paradas_intermedias) VALUES
-(001,'Cartagena' , 001);
+(002, 'Caucacia', 0018, 001, 002),  
 
-INSERT INTO Detalle_Destinos_Rutas (Id_destino, id_ruta) VALUES
-(001, 001);
+(003, 'Montería', 006, 004, 003),  
 
-INSERT INTO Detalle_Buses_Rutas (Id_bus, id_ruta) VALUES
-('ABC-123', 001);
+(004, 'Apartadó', 003, 003, 004),  
 
-INSERT INTO paradas_intermedias (id_parada, Nombre_parada, id_ciudad) VALUES
-(001,'Parada a restaurante', 001);
+(005, 'Santa Marta', 0012, 006, 005),  
 
-INSERT INTO viajes (id_viaje, Fecha_salida, Valor, id_bus, id_conductor, id_ruta, id_ciudad_origen, id_ciudad_destino) VALUES
-(001, '2023-01-15', 102.45, 'ABC-123', 100001, 001, 002, 001);
+(006, 'Medellín', 003, 005, 006),  
 
-INSERT INTO Cliente (id_cliente, Nombres, Apellidos, Telefono, Correo, id_tipo_cliente, id_ciudad_origen, id_ciudad_residencia) VALUES
-(001, 'Juan', 'Pérez', '3012345678', 'juan.perez@example.com', 001, 001, 0029);
+(007, 'Valledupar', 020, 008, 007),  
 
-INSERT INTO Tipo_cliente (id_tipo_cliente, Nombre, Descripcion) VALUES
-(001, 'Corporativo', 'Grandes empresas que adquieren productos o servicios a gran escala.');
+(008, 'Rionegro', 0018, 007, 008),  
 
-INSERT INTO Metodo_pago (id_metodo_pago, Nombre) VALUES
-(001, 'Tarjeta de crédito');
+(009, 'Sincelejo', 0017, 0010, 009),  
 
-INSERT INTO Boletos (id_boleto, Numero_asiento, id_destino, id_empresa, id_bus, id_ruta) VALUES
-(001, 01, 001, 001, 'ABC-123', 001);
+(0010, 'Santa Rosa de Osos', 003, 009, 0010),  
 
-INSERT INTO Equipaje (id_equipaje, peso, descripcion, id_cliente, id_boleto) VALUES
-(001, 12.55, 'Maleta color azul tres cremalleras y stiker de boleto al frente', 001, 001);
+(0011, 'San Juan del Cesar', 0012, 0011, 0011),  
 
-INSERT INTO Factura (id_factura, Fecha_facturacion, Valor_total, id_boleto, id_seguro, id_equipaje, id_viaje, id_metodo_pago) VALUES
-(001, '2024-01-12', 71000.00, 001, 001, 001, 001, 001);
+(0012, 'Envigado', 0018, 0011, 0012),  
+
+(0013, 'Ciénaga', 007, 0014, 0013),  
+
+(0014, 'Barranquilla', 007, 0013, 0014),  
+
+(0015, 'Guatape', 003, 0016, 0015),  
+
+(0016, 'Maicao', 002, 0015, 0016),  
+
+(0017, 'El peñol', 0018, 0018, 0017),  
+
+(0018, 'Uribia', 003, 0017, 0018),  
+
+(0019, 'Caramanta', 0018, 0020, 0019),  
+
+(0020, 'Aracataca', 0020, 0019, 0020),  
+
+(0021, 'Briceño', 003, 0022, 0021),  
+
+(0022, 'San Juan del Cesar', 007, 0021, 0022),  
+
+(0023, 'Riohacha', 002, 0024, 0023),  
+
+(0024, 'El banco', 007, 0023, 0024),  
+
+(0025, 'Fundación', 0013, 0026, 0025),  
+
+(0026, 'Puerto Berrio', 0018, 0025, 0026),  
+
+(0027, 'Marinilla', 003, 0028, 0027),  
+
+(0028, 'Santa Catalina', 001, 0027, 0028),  
+
+(0029, 'Turbaco', 0023, 0030, 0029),  
+
+(0030, 'San Marcos', 0025, 0029, 0030);  
+
+INSERT INTO Rutas (id_ruta, Nombre, id_paradas_intermedias) VALUES  
+
+(001,'Cartagena' , 001),   
+
+(002, 'Caucacia', 002),   
+
+(003, 'Montería', 003),   
+
+(004, 'Apartadó', 004),   
+
+(005, 'Santa Marta', 005),   
+
+(006, 'Medellín', 006),   
+
+(007, 'Valledupar',007),   
+
+(008, 'Rionegro', 008),   
+
+(009, 'Sincelejo', 009),   
+
+(0010,'Santa Rosa de Osos', 0010), 
+
+(0011, 'San Juan del Cesar', 0011),   
+
+(0012, 'Envigado', 0012),   
+
+(0013, ' Ciénaga' , 0013),   
+
+(0014, 'Barranquilla', 0014),   
+
+(0015,'Guatape', 0015),   
+
+(0016, 'Maicao', 0016),   
+
+(0017, 'El peñol', 0017),   
+
+(0018, 'Uribia', 0018),   
+
+(0019, 'Caramanta', 0019),   
+
+(0020, 'Aracataca', 0020),   
+
+(0021, 'Briceño', 0021),   
+
+(0022, 'San Juan del Cesar', 0022),   
+
+(0023, 'Riohacha', 0023),   
+
+(0024, 'El banco', 0024),   
+
+(0025, 'Fundación', 0025),   
+
+(0026, 'Puerto Berrio', 0026),  
+
+(0027, 'Marinilla', 0027),   
+
+(0028, 'Santa Catalina', 0028),   
+
+(0029, 'Turbaco', 0029),   
+
+(0030, 'San Marcos', 0030);  
+
+INSERT INTO Detalle_Destinos_Rutas (Id_destino, id_ruta) VALUES 
+
+(001, 001), 
+
+(002, 002),  
+
+(003, 003),  
+
+(004, 004),  
+
+(005, 005),  
+
+(006, 006),  
+
+(007, 007),  
+
+(008, 008),  
+
+(009, 009),  
+
+(0010, 0010),  
+
+(0011, 0011),  
+
+(0012, 0012),  
+
+(0013, 0013),  
+
+(0014, 0014),  
+
+(0015, 0015),  
+
+(0016, 0016),  
+
+(0017, 0017),  
+
+(0018, 0018),  
+
+(0019, 0019),  
+
+(0020, 0020),  
+
+(0021, 0021),  
+
+(0022, 0022),  
+
+(0023, 0023),  
+
+(0024, 0024),  
+
+(0025, 0025),  
+
+(0026, 0026),  
+
+(0027, 0027),  
+
+(0028, 0028),  
+
+(0029, 0029),  
+
+(0030, 0030); 
+
+INSERT INTO Detalle_Buses_Rutas (Id_bus, id_ruta) VALUES 
+
+('ABC-123', 001), 
+
+('DEF-456', 002), 
+
+('GHI-789', 003),  
+
+('JKL-012', 004),  
+
+('MNO-345', 005),  
+
+('PQR-678', 006),  
+
+('STU-901', 007),  
+
+('VWX-234', 008),  
+
+('YZA-567', 009),  
+
+('BCD-890', 0010),  
+
+('EFG-123', 0011),  
+
+('HIJ-456', 0012),  
+
+('KLM-789', 0013),  
+
+('NOP-012', 0014),  
+
+('QRS-345', 0015),  
+
+('TUV-678', 0016),  
+
+('WXY-901', 0017),  
+
+('ZAB-234', 0018),  
+
+('CDE-567', 0019),  
+
+('FGH-890', 0020),  
+
+('HIJ-123', 0021),  
+
+('KLM-456', 0022),  
+
+('NOP-789', 0023),  
+
+('QRS-012', 0024),  
+
+('TUV-345', 0025),  
+
+('WXY-678', 0026),  
+
+('ZAB-901', 0027),  
+
+('RPC-756', 0028),  
+
+('JXK-086', 0029),  
+
+('HIS-063', 0030);  
+
+INSERT INTO paradas_intermedias (id_parada, Nombre_parada, id_ciudad) VALUES  
+
+(001,'Parada a restaurante', 001),   
+
+(002,'Parada de gasolina', 002),   
+
+(003,'Parada por llanta', 003),   
+
+(004,'Parada a restaurante',004),   
+
+(005,'Parada para descansar', 005),   
+
+(006,'Parada por transito',006),   
+
+(007,'Parada por calentamiento de motor',007),   
+
+(008,'Parada a restaurante',008),   
+
+(009,'Parada a terminal oficial',009),   
+
+(0010,'Parada por emergencia medica', 0010),   
+
+(0011,'Parada turistica', 0011),   
+
+(0012,'Parada para intercambio de conductores', 0012),   
+
+(0013,'Parada para cambio de bus',0013),  
+
+(0014,'Parada para lavar bus',0014),  
+
+(0015,'Parada a restaurante',0015),  
+
+(0016,'Parada a restaurante',0016),  
+
+(0017,'Parada a terminal oficial', 0017),  
+
+(0018,'Parada por calentamiento de motor',0018),  
+
+(0019,'Parada por gasolina ',0019),  
+
+(0020,'Parada por gasolina', 0020),  
+
+(0021,'Parada por emergencia medica', 0021),  
+
+(0022,'Parada por llanta',0022),  
+
+(0023,'Parada para descansar',0023),  
+
+(0024,'Parada para intercambio de conductores', 0024),  
+
+(0025,'Parada a restaurante ', 0025),  
+
+(0026,'Parada por gasolina',0026),  
+
+(0027,'Parada por transito',0027),  
+
+(0028,'Parada por llanta',0028),  
+
+(0029,'parada por gasolina', 0029),  
+
+(0030,'Parada por gasolina', 0030);  
+
+INSERT INTO viajes (id_viaje, Fecha_salida, Valor, id_bus, id_conductor, id_ruta, id_ciudad_origen, id_ciudad_destino) VALUES   
+
+  
+
+(001, '2023-01-15', 102.45, 'ABC-123', 100001, 001, 002, 001),    
+
+(002, '2023-02-08', 215.78, 'CDE-567', 100019, 002, 001, 002),   
+
+(003, '2023-03-22', 345.90, 'HIJ-123', 100021, 003, 004, 003),   
+
+(004, '2023-04-18', 478.25, 'HIJ-456', 100012, 004, 003, 004),   
+
+(005, '2023-05-07', 125.00, 'JKL-012', 100004, 005, 006, 005),   
+
+(006, '2023-06-13', 380.15, 'JXK-086', 100029, 006, 005, 006),   
+
+(007, '2023-07-29', 245.60, 'KLM-789', 100013, 007, 008, 007),   
+
+(008, '2023-08-11', 400.99, 'NOP-012', 100014, 008, 007, 008),   
+
+(009, '2023-09-03', 155.30, 'QRS-012', 100024, 009, 0010, 009),   
+
+(0010, '2023-10-19', 210.10, 'QRS-345', 100015, 0010, 009, 0010),   
+
+(0011, '2023-11-25', 320.85, 'STU-901', 100007, 0011, 0012, 0011),   
+
+(0012, '2023-12-05', 150.50, 'VWX-234', 100008, 0012, 0011, 0012),   
+
+(0013, '2022-01-10', 275.45, 'YZA-567', 100009, 0013, 0014, 0013),   
+
+(0014, '2022-02-16', 499.99, 'ZAB-901', 100027, 0014, 0013, 0014),   
+
+(0015, '2022-03-27', 180.75, 'ABC-123', 100001, 0015, 0016, 0015),   
+
+(0016, '2022-04-09', 360.00, 'BCD-890', 100010, 0016, 0015, 0016),   
+
+(0017, '2022-05-20', 298.40, 'EFG-123', 100011, 0017, 0018, 0017),   
+
+(0018, '2022-06-08', 430.60, 'MNO-345', 100005, 0018, 0017, 0018),   
+
+(0019, '2022-07-12', 220.25, 'KLM-789', 100013, 0019, 0020, 0019),   
+
+(0020, '2022-08-24', 390.90, 'RPC-756', 100028, 0020, 0019, 0020),   
+
+(0021, '2022-09-17', 135.70, 'HIS-063', 100030, 0021, 0022, 0021),   
+
+(0022, '2022-10-06', 175.10, 'NOP-012', 100014, 0022, 0021, 0022),   
+
+(0023, '2022-11-14', 250.00, 'WXY-678', 100026, 0023, 0024, 0023),   
+
+(0024, '2022-12-21', 450.80, 'PQR-678', 100006, 0024, 0023, 0024),   
+
+(0025, '2021-01-30', 380.25, 'NOP-789', 100023, 0025, 0026, 0025),   
+
+(0026, '2021-02-18', 150.99, 'JKL-012', 100004, 0026, 0025, 0026),   
+
+(0027, '2021-03-05', 495.50, 'WXY-901', 100017, 0027, 0028, 0027),   
+
+(0028, '2021-04-12', 275.00, 'FGH-890', 100020, 0028, 0027, 0028),   
+
+(0029, '2021-05-28', 150.15, 'KLM-456', 100022, 0029, 0030, 0029),   
+
+(0030, '2021-06-15', 430.45, 'ZAB-901', 100027, 0030, 0029, 0030); 
+
+
+INSERT INTO Cliente (id_cliente, Nombres, Apellidos, Telefono, Correo, id_tipo_cliente, id_ciudad_origen, id_ciudad_residencia) VALUES  
+
+(001, 'Juan', 'Pérez', '3012345678', 'juan.perez@example.com', 001, 001, 0029),   
+
+(002, 'María', 'Gómez', '3023456789', 'maria.gomez@example.com', 002, 002, 0028),  
+
+(003, 'Luis', 'Hernández', '3034567890', 'luis.hernandez@example.com', 003, 003, 0027),   
+
+(004, 'Ana', 'Ramírez', '3045678901', 'ana.ramirez@example.com', 004, 004, 0030),   
+
+(005, 'Carlos', 'Martínez', '3056789012', 'carlos.martinez@example.com', 005, 005, 0026),  
+
+(006, 'Laura', 'Torres', '3067890123', 'laura.torres@example.com', 006, 006, 0025),   
+
+(007, 'David', 'Cruz', '3078901234', 'david.cruz@example.com', 007, 007, 0025),   
+
+(008, 'Sara', 'Morales', '3089012345', 'sara.morales@example.com', 008, 008, 0027),   
+
+(009, 'Jorge', 'Jiménez', '3090123456', 'jorge.jimenez@example.com', 009, 009, 0030),   
+
+(0010, 'Carmen', 'Díaz', '3101234567', 'carmen.diaz@example.com', 0010, 0010, 0027),   
+
+(0011, 'Andrés', 'Suárez', '3112345678', 'andres.suarez@example.com', 0011, 0011, 0028),   
+
+(0012, 'Verónica', 'Vargas', '3123456789', 'veronica.vargas@example.com', 0012, 0012, 0029),   
+
+(0013, 'Ricardo', 'Mendoza', '3134567890', 'ricardo.mendoza@example.com', 0013, 0013, 0019),   
+
+(0014, 'Patricia', 'Castro', '3145678901', 'patricia.castro@example.com', 0014, 0014, 0011),   
+
+(0015, 'Fernando', 'Paredes', '3156789012', 'fernando.paredes@example.com', 0015, 0015, NULL),   
+
+(0016, 'Liliana', 'Salazar', '3167890123', 'liliana.salazar@example.com', 0016, 0016, 0014),   
+
+(0017, 'Eduardo', 'Moreno', '3178901234', 'eduardo.moreno@example.com', 0017, 0017, 0013),   
+
+(0018, 'Sofía', 'Rojas', '3189012345', 'sofia.rojas@example.com', 0018, 0018, 0012),   
+
+(0019, 'Diego', 'Ochoa', '3190123456', 'diego.ochoa@example.com', 0019, 0019, 0011),   
+
+(0020, 'Lucía', 'Guerrero', '3201234567', 'lucia.guerrero@example.com', 0020, 0020, 0010),   
+
+(0021, 'Ángel', 'Córdoba', '3212345678', 'angel.cordoba@example.com', 0021, 0021, 005),   
+
+(0022, 'Valentina', 'Cáceres', '3223456789', 'valentina.caceres@example.com', 0022, 0022, 004),   
+
+(0023, 'Sebastián', 'González', '3234567890', 'sebastian.gonzalez@example.com', 0023, 0023, 003),   
+
+(0024, 'Isabella', 'Maldonado', '3245678901', 'isabella.maldonado@example.com', 0024, 0024, 002),   
+
+(0025, 'Nicolás', 'Bermúdez', '3256789012', 'nicolas.bermudez@example.com', 0025, 0025, 001),   
+
+(0026, 'Mariana', 'Ceballos', '3267890123', 'mariana.ceballos@example.com', 0026, 0026, 005),   
+
+(0027, 'Héctor', 'Rincón', '3278901234', 'hector.rincon@example.com', 0027, 0027, 004),   
+
+(0028, 'Gabriela', 'López', '3289012345', 'gabriela.lopez@example.com', 0028, 0028, 003),   
+
+(0029, 'Arturo', 'Alvarez', '3290123456', 'arturo.alvarez@example.com', 0029, 0029, 002),   
+
+(0030, 'Natalia', 'Pinto', '3301234567', 'natalia.pinto@example.com', 0030, 0030, 001);  
+
+INSERT INTO Tipo_cliente (id_tipo_cliente, Nombre, Descripcion) VALUES   
+
+(001, 'Corporativo', 'Grandes empresas que adquieren productos o servicios a gran escala.'),  
+
+(002, 'Pequeña empresa', 'Pequeñas empresas o startups con necesidades limitadas.'),  
+
+(003, 'Mediana empresa', 'Empresas medianas que adquieren productos en volúmenes moderados.'),  
+
+(004, 'Individual', 'Clientes que compran productos para uso personal.'),  
+
+(005, 'Distribuidor', 'Compran productos para distribuir en otros mercados o minoristas.'),  
+
+(006, 'Minorista', 'Tiendas que venden productos directamente al consumidor final.'),  
+
+(007, 'Mayorista', 'Compradores que adquieren grandes volúmenes para reventa a minoristas.'),  
+
+(008, 'Gobierno', 'Entidades gubernamentales que adquieren productos o servicios para uso público.'),  
+
+(009, 'ONG', 'Organizaciones sin ánimo de lucro que requieren productos o servicios para sus proyectos.'),  
+
+(0010, 'Educativo', 'Instituciones educativas que compran productos para uso académico.'),  
+
+(0011, 'Cliente habitual', 'Clientes que hacen compras recurrentes de manera periódica.'),  
+
+(0012, 'Cliente esporádico', 'Clientes que realizan compras ocasionales sin frecuencia definida.'), 
+
+(0013, 'Cliente VIP', 'Clientes importantes que reciben atención especial por su volumen de compra.'),  
+
+(0014, 'Cliente nuevo', 'Clientes que acaban de realizar su primera compra.'),  
+
+(0015, 'Cliente antiguo', 'Clientes que no han comprado en mucho tiempo pero lo han hecho en el pasado.'),  
+
+(0016, 'Cliente online', 'Clientes que realizan sus compras a través de plataformas en línea.'),  
+
+(0017, 'Cliente offline', 'Clientes que prefieren realizar compras en tiendas físicas.'),  
+
+(0018, 'Cliente internacional', 'Clientes que compran productos desde otros países.'),  
+
+(0019, 'Cliente nacional', 'Clientes que realizan compras dentro del territorio nacional.'),  
+
+(0020, 'Cliente premium', 'Clientes que adquieren productos o servicios de categoría superior.'),  
+
+(0021, 'Cliente básico', 'Clientes que adquieren productos o servicios estándar o básicos.'),  
+
+(0022, 'Cliente leal', 'Clientes que muestran fidelidad constante hacia la empresa.'),  
+
+(0023, 'Cliente perdido', 'Clientes que han dejado de comprar durante un largo periodo de tiempo.'),  
+
+(0024, 'Cliente nuevo', 'Clientes que acaban de realizar su primera compra.'),  
+
+(0025, 'Proveedor', 'Empresas o individuos que también proveen productos y que compran para reventa.'),   
+
+(0026, 'Cliente potencial', 'Clientes que han mostrado interés, pero aún no han realizado una compra.'),  
+
+(0027, 'Cliente antiguo', 'Clientes que no han comprado en mucho tiempo pero lo han hecho en el pasado.'),  
+
+(0028, 'Cliente por campaña', 'Clientes que han llegado a la empresa mediante campañas de marketing.'),  
+
+(0029, 'Cliente de contrato', 'Clientes que adquieren productos bajo un contrato formal con la empresa.'),  
+
+(0030, 'Cliente con suscripción', 'Clientes que tienen una suscripción para recibir productos o servicios regularmente.');  
+
+
+INSERT INTO Metodo_pago (id_metodo_pago, Nombre) VALUES  
+
+(001, 'Tarjeta de crédito'),  
+
+(002, 'Tarjeta de débito'),  
+
+(003, 'Transferencia bancaria'),  
+
+(004, 'Efectivo'),  
+
+(005, 'Transferencia bancaria'),  
+
+(006, 'Pago móvil'),  
+
+(007, 'Daviplata'),  
+
+(008, 'Efectivo'),  
+
+(009, 'Transferencia bancaria'),  
+
+(0010, 'Tarjeta de crédito'),  
+
+(0011, 'Nequi'),  
+
+(0012, 'Débito automático'),  
+
+(0013, 'Transferencia bancaria'),  
+
+(0014, 'Efectivo'),  
+
+(0015, 'Pago móvil'),  
+
+(0016, 'Daviplata'),  
+
+(0017, 'Tarjeta de crédito'),  
+
+(0018, 'Efectivo'),  
+
+(0019, 'Pago en oficina'),  
+
+(0020, 'Pago por código QR'),  
+
+(0021, 'Pago en tienda física'),  
+
+(0022, 'Tarjeta de crédito'),  
+
+(0023, 'Efectivo'),  
+
+(0024, 'Pago por depósito en cuenta'),  
+
+(0025, 'Pago por ventanilla bancaria'),  
+
+(0026, 'Pago con tarjeta prepaga'),  
+
+(0027, 'Nequi'),  
+
+(0028, 'Efectivo'),  
+
+(0029, 'Tarjeta de crédito'),  
+
+(0030, 'Pago por factura electrónica');  
+
+
+INSERT INTO Boletos (id_boleto, Numero_asiento, id_destino, id_empresa, id_bus, id_ruta) VALUES 
+
+(001, 01, 001, 001, 'ABC-123', 001),  
+
+(002, 02, 002, 002, 'DEF-456', 002),  
+
+(003, 03, 003, 003, 'GHI-789', 003),  
+
+(004, 04, 004, 004, 'JKL-012', 004),  
+
+(005, 05, 005, 005, 'MNO-345', 005),  
+
+(006, 06, 006, 006, 'PQR-678', 006),  
+
+(007, 07, 007, 007, 'STU-901', 007),  
+
+(008, 08, 008, 008, 'VWX-234', 008),  
+
+(009, 09, 009, 009, 'YZA-567', 009),  
+
+(0010, 10, 0010, 0010, 'BCD-890', 0010),  
+
+(0011, 11, 0011, 0011, 'EFG-123', 0011),  
+
+(0012, 12, 0012, 0012, 'HIJ-456', 0012),  
+
+(0013, 13, 0013, 0013, 'KLM-789', 0013),  
+
+(0014, 14, 0014, 0014, 'NOP-012', 0014),  
+
+(0015, 15, 0015, 0015, 'QRS-345', 0015),  
+
+(0016, 16, 0016, 0016, 'TUV-678', 0016),  
+
+(0017, 17, 0017, 0017, 'WXY-901', 0017),  
+
+(0018, 18, 0018, 0018, 'ZAB-234', 0018),  
+
+(0019, 19, 0019, 0019, 'CDE-567', 0019),  
+
+(0020, 20, 0020, 0020, 'FGH-890', 0020),  
+
+(0021, 21, 0021, 0021, 'HIJ-123', 0021),  
+
+(0022, 22, 0022, 0022, 'KLM-456', 0022),  
+
+(0023, 23, 0023, 0023, 'NOP-789', 0023),  
+
+(0024, 24, 0024, 0024, 'QRS-012', 0024),  
+
+(0025, 25, 0025, 0025, 'TUV-345', 0025),  
+
+(0026, 26, 0026, 0026, 'WXY-678', 0026),  
+
+(0027, 27, 0027, 0027, 'ZAB-901', 0027),  
+
+(0028, 28, 0028, 0028, 'RPC-756', 0028),  
+
+(0029, 29, 0029, 0029, 'JXK-086', 0029),  
+
+(0030, 30, 0030, 0030, 'HIS-063', 0030); 
+
+
+INSERT INTO Equipaje (id_equipaje, peso, descripcion, id_cliente, id_boleto) VALUES 
+
+(001, 12.55, 'Maleta color azul tres cremalleras y stiker de boleto al frente', 001, 001),  
+
+(002, 15.44, 'Bolso de camper azul y negro con una estrella atras', 002, 002),  
+
+(003, 8.66, 'Maleta totto negra con reflectiva, con boleto al frente', 003, 003),  
+
+(004, 4.02, 'Cartera café claro con candado', 004, 004),  
+
+(005, 9.41, 'Canasta con toalla encima de color verde, con el stiker del boleto en la manija', 005, 005),  
+
+(006, 7.50, 'Mochila de lona marrón con una etiqueta grande en el lateral', 006, 006),  
+
+(007, 10.20, 'Bolso deportivo rojo y negro con rayas horizontales', 007, 007),  
+
+(008, 5.35, 'Maletín gris con tiras de cuero y cremallera dorada', 008, 008),  
+
+(009, 12.85, 'Bolsa negra de viaje con diseño de rayas en los laterales', 009, 009),  
+
+(0010, 6.75, 'Maleta pequeña verde con estampa de flores en el centro', 0010, 0010),  
+
+(0011, 8.90, 'Bolso de mano morado con un parche de estrella', 0011, 0011),  
+
+(0012, 7.25, 'Cartera negra con hebilla plateada en la parte frontal', 0012, 0012),  
+
+(0013, 9.80, 'Mochila azul con estampado de montañas en la tapa', 0013, 0013),  
+
+(0014, 13.00, 'Maletín de cuero marrón con bordes desgastados', 0014, 0014),  
+
+(0015, 11.55, 'Bolso negro con dos cremalleras en los costados', 0015, 0015),  
+
+(0016, 6.45, 'Mochila con diseño de camuflaje y varios bolsillos externos', 0016, 0016),  
+
+(0017, 14.20, 'Maleta gris con detalles en color azul y cierre con clave', 0017, 0017),  
+
+(0018, 10.90, 'Bolso deportivo verde con logo de equipo de fútbol', 0018, 0018),  
+
+(0019, 7.80, 'Bolsa de viaje azul con estampado de lunares', 0019, 0019),  
+
+(0020, 9.30, 'Maletín negro con asas acolchonadas y logotipo en el frente', 0020, 0020),  
+
+(0021, 12.00, 'Bolso de lona gris con tirantes de cuero y cierre frontal', 0021, 0021),  
+
+(0022, 11.35, 'Mochila escolar rosa con diseño de caricaturas', 0022, 0022),  
+
+(0023, 13.25, 'Maleta rígida plateada con ruedas y etiqueta lateral', 0023, 0023),  
+
+(0024, 8.10, 'Bolso de mano azul con cremalleras doradas', 0024, 0024),  
+
+(0025, 14.80, 'Maleta negra grande con ruedas y asa extensible', 0025, 0025),  
+
+(0026, 9.75, 'Bolsa de viaje morada con diseño de rayas', 0026, 0026),  
+
+(0027, 12.40, 'Maletín gris con compartimentos adicionales', 0027, 0027),  
+
+(0028, 10.65, 'Mochila amarilla con bolsillos laterales y parche frontal', 0028, 0028),  
+
+(0029, 6.95, 'Cartera roja con cierre magnético y cadena dorada', 0029, 0029),  
+
+(0030, 8.85, 'Bolsa deportiva azul con cremallera lateral y logotipo', 0030, 0030); 
+INSERT INTO Factura (id_factura, Fecha_facturacion, Valor_total, id_boleto, id_seguro, id_equipaje, id_viaje, id_metodo_pago) VALUES  
+
+(001, '2024-01-12', 71000.00, 001, 001, 001, 001, 001),   
+
+(002, '2024-01-13', 72000.00, 002, 002, 002, 002, 002),   
+
+(003, '2024-01-14', 73000.00, 003, 003, 003, 003, 003),   
+
+(004, '2024-01-15', 74000.00, 004, 004, 004, 004, 004),   
+
+(005, '2024-02-16', 75000.00, 005, 005, 005, 005, 005),   
+
+(006, '2024-02-17', 76000.00, 006, 006, 006, 006, 006),   
+
+(007, '2024-02-18', 77000.00, 007, 007, 007, 007, 007),   
+
+(008, '2024-02-19', 78000.00, 008, 008, 008, 008, 008),   
+
+(009, '2024-03-20', 79000.00, 009, 009, 009, 009, 009),   
+
+(0010, '2024-03-12', 80000.00, 0010, 0010, 0010, 0010, 0010),   
+
+(0011, '2024-03-16', 81000.00, 0011, 0011, 0011, 0011, 0011),   
+
+(0012, '2024-04-18', 82000.00, 0012, 0012, 0012, 0012, 0012),   
+
+(0013, '2024-04-19', 83000.00, 0013, 0013, 0013, 0013, 0013),   
+
+(0014, '2024-04-30', 84000.00, 0014, 0014, 0014, 0014, 0014),   
+
+(0015, '2024-04-29', 85000.00, 0015, 0015, 0015, 0015, 0015),   
+
+(0016, '2024-04-20', 86000.00, 0016, 0016, 0016, 0016, 0016),   
+
+(0017, '2024-05-21', 87000.00, 0017, 0017, 0017, 0017, 0017),   
+
+(0018, '2024-05-22', 88000.00, 0018, 0018, 0018, 0018, 0018),   
+
+(0019, '2024-05-25', 89000.00, 0019, 0019, 0019, 0019, 0019),   
+
+(0020, '2024-06-01', 90000.00, 0020, 0020, 0020, 0020, 0020),   
+
+(0021, '2024-06-02', 91000.00, 0021, 0021, 0021, 0021, 0021),   
+
+(0022, '2024-06-04', 92000.00, 0022, 0022, 0022, 0022, 0022),   
+
+(0023, '2024-07-04', 93000.00, 0023, 0023, 0023, 0023, 0023),   
+
+(0024, '2024-07-06', 94000.00, 0024, 0024, 0024, 0024, 0024),   
+
+(0025, '2024-08-27', 95000.00, 0025, 0025, 0025, 0025, 0025),   
+
+(0026, '2024-08-30', 96000.00, 0026, 0026, 0026, 0026, 0026),   
+
+(0027, '2024-09-27', 97000.00, 0027, 0027, 0027, 0027, 0027),   
+
+(0028, '2024-09-28', 98000.00, 0028, 0028, 0028, 0028, 0028),   
+
+(0029, '2024-09-29', 99000.00, 0029, 0029, 0029, 0029, 0029),   
+
+(0030, '2024-10-08', 100000.00, 0030, 0030, 0030, 0030, 0030); 
 
