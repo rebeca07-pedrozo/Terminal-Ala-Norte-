@@ -1,8 +1,13 @@
 import re
 from pathlib import Path
 
+<<<<<<< HEAD
 archivo_entrada = "C:/Users/USUARIO/OneDrive/Documentos/BD_Terminal/Insert/datosOccidente.sql"
 archivo_salida = "C:/Users/USUARIO/OneDrive/Documentos/BD_Terminal/Insert/datosOccidente_reformateado.sql"
+=======
+archivo_entrada = "C:/Users/USUARIO/OneDrive/Documentos/BD_Terminal/Insert/datosSur.sql"
+archivo_salida = "C:/Users/USUARIO/OneDrive/Documentos/BD_Terminal/Insert/datosSur_reformateado.sql"
+>>>>>>> 7a21e28f3af5aa80e58eecf1e5a6268f6be16dfa
 with open(archivo_entrada, "r", encoding="utf-8", errors="replace") as f:
     contenido = f.read()
 insert_grupos = {}
