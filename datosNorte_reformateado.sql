@@ -332,10 +332,9 @@ INSERT INTO Tipo_bus (id_tipo_bus, Nombre) VALUES
 (029, 'Bus de transporte de trabajadores'),
 (030, 'Bus de transporte alternativo');
 
-INSERT INTO buses (Placa, Marca, Capacidad, id_tipo_bus, id_empresa, id_empleado) VALUES
-('ABC-123', 'Mercedes-Benz', 50, 001, 001, 100001);
 
 INSERT INTO Buses (Placa, Marca, Capacidad, id_tipo_bus, id_empresa, id_empleado) VALUES
+('ABC-123', 'Mercedes-Benz', 50, 001, 001, 100001),
 ('DEF-456', 'Volvo', 40, 002, 002, 100002),
 ('GHI-789', 'Scania', 55, 003, 003, 100003),
 ('JKL-012', 'Iveco', 45, 004, 004, 100004),
